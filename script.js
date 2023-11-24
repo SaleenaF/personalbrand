@@ -5,12 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   button.addEventListener('click', function () {
     const classList = body.classList;
 
-    if (classList.contains('dark-theme') || classList.contains('light-theme')) {
-      classList.remove(classList.contains('light-theme') ? 'light-theme' : 'dark-theme');
-      button.innerText = classList.contains('light-theme') ? 'Dark Theme' : 'Light Theme';
-    } else {
-      classList.add('light-theme');
-      button.innerText = 'Light Theme';
+    if (classList.contains('dark-theme')) {
+        classList.remove('dark-theme');
+        classList.add('light-theme');
+        button.innerText = 'Light Theme';
+    } else if (classList.contains('light-theme')) {
+        classList.remove('light-theme');
+        classList.add('dark-theme');
+        button.innerText = 'Dark Theme';
     }
   });
 });
