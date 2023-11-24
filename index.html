@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Theme Switcher
+	</title>
+	<style>
+		.page {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: 700px;
+			max-height: 800px;
+			background-color: #252525;
+			text-align: center;
+		}
+
+		.light-theme,
+		.dark-theme {
+			background-color: #f2f2f2;
+			color: #000;
+			padding: 20px;
+			font-size: 32px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.light-theme {
+			box-shadow: 0 0 5px #000;
+		}
+
+		.dark-theme {
+			box-shadow: 0 0 5px #fff;
+			text-shadow: 0 0 10px #fff;
+		}
+	</style>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="page">
+		<button class="light-theme" onclick="handleTheme('light')">Light</button>
+		<button class="dark-theme" onclick="handleTheme('dark')">Dark</button>
+	</div>
+</body>
+</html>
