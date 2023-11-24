@@ -1,8 +1,12 @@
 window.onload = function() {
-  var themeButton = document.querySelector(".theme-button");
-  
-  themeButton.addEventListener("click", function() {
-    document.documentElement.classList.toggle("dark-theme");
-    themeButton.innerText = themeButton.innerText ? "Dark Theme" : "Light Theme";
+  const themebutton = document.querySelector('.theme-button');
+  const bodyelement = document.querySelector('body');
+  themebutton.addEventListener('click', function(event) {
+    bodyelement.classList.toggle('dark-theme');
+    if (themebutton.innerText === 'Dark Theme') {
+      themebutton.innerText = 'Light Theme';
+    } else {
+      themebutton.innerText = 'Dark Theme';
+    }
   });
 };
