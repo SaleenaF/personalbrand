@@ -1,12 +1,14 @@
-window.onload = function() {
-  const themebutton = document.querySelector('.theme-button');
-  const bodyelement = document.querySelector('body');
-  themebutton.addEventListener('click', function(event) {
-    bodyelement.classList.toggle('dark-theme');
-    if (themebutton.innerText === 'Dark Theme') {
-      themebutton.innerText = 'Light Theme';
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector('.theme-button');
+  const body = document.querySelector('body');
+  button.addEventListener('click', function () {
+    const classList = body.classList;
+    if (classList.contains('dark-theme')) {
+      classList.remove('dark-theme');
+      button.innerText = 'Light Theme';
     } else {
-      themebutton.innerText = 'Dark Theme';
+      classList.add('dark-theme');
+      button.innerText = 'Dark Theme';
     }
   });
-};
+});
